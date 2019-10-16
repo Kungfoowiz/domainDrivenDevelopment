@@ -34,7 +34,7 @@ namespace MySpace
     // The interface forms the contract or high level definition of the model.
     // It differs from an abstract class because here we are purely expressing a high level definition.
     // There is supposed to be no code in an interface.
-    // It should be kept as a separate file with a name prefixed by 'I', for example: ISynonymManager.cs
+    // It should be kept as a separate file with a name prefixed by 'I', for example: IMyInterface.cs
     // Any class (model/domain) usages then inherit this interface.
     public interface IMyInterface
     {
@@ -46,7 +46,7 @@ namespace MySpace
     }
     
     // The actual model/domain can be a class (MyClass.cs)
-    // Interface (ISynonymManager) defines what is expected of the model.
+    // Interface (IMyInterface) defines what is expected of the model.
     // It serves many purposes, you can have multiple models (domains),
     // 1. Multiple models but can have different implementations.
     // 2. An expected contract is established for all models, so instances can be called in the same way.
@@ -64,7 +64,7 @@ namespace MySpace
         public string getName();
 
 
-        // On the constructor: log, keywordsManager, repository, unitOfWork are depedency injected (DI).
+        // On the constructor: log is depedency injected (DI).
         // This is typically handled internally (Dotnet Core) or with StructureMap (ASP.NET MVC/WebAPI).
         public MyClass(ILog log)
         {

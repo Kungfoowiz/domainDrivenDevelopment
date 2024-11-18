@@ -1,6 +1,6 @@
 using System;
 
-using ExampleDDD.Services;
+using ExampleDDD.Service;
 
 namespace ExampleDDD.Component
 {
